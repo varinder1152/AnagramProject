@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: AnagramProject
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: UnlockZone
+Implementation-Vendor-Id: com.test
+Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/AnagramProje
+ ct/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
