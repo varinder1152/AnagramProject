@@ -11,22 +11,21 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-
 @Service
 public class AnagramService {
-	
+
 	/**
-	 * A compare method which accepts 2 string arguments to compare 
-	 * the anagrams
-	 * @param 
-	 * @param 
+	 * A compare method which accepts 2 string arguments to compare the anagrams
+	 * 
+	 * @param
+	 * @param
 	 * @return Boolean
 	 * 
 	 * 
 	 */
-public boolean checkAnagrams(String firstStr, String secondStr) {
-		
-		if(firstStr.length()!=secondStr.length())
+	public boolean checkAnagrams(String firstStr, String secondStr) {
+
+		if (firstStr.length() != secondStr.length())
 			return false;
 
 		Map<Character, Long> lettersInWord1 = new HashMap<Character, Long>();
@@ -51,42 +50,35 @@ public boolean checkAnagrams(String firstStr, String secondStr) {
 		return true;
 	}
 
+	/**
+	 * A generate method which accepts string argument to generate the anagrams
+	 * 
+	 * @param
+	 * @return List<String>
+	 * 
+	 * 
+	 */
+	public List<String> generateAnagrams(String input) {
 
-/**
- * A generate method which accepts  string argument to generate the anagrams
- * @param  
- * @return List<String>
- * 
- * 
- */
-public List<String> generateAnagrams(String input)
-{
-	
-	List<String> set = new ArrayList<String>();
-	    if (input == "")
-	        return set;
+		List<String> list = new ArrayList<String>();
+		if (input == "")
+			return list;
 
-	    Character a = input.charAt(0);
+		Character a = input.charAt(0);
 
-	    if (input.length() > 1)
-	    {
-	        input = input.substring(1);
+		if (input.length() > 1) {
+			input = input.substring(1);
 
-	        List<String> permSet = generateAnagrams(input);
+			List<String> recList = generateAnagrams(input);
 
-	        for (String x : permSet)
-	        {
-	            for (int i = 0; i <= x.length(); i++)
-	            {
-	                set.add(x.substring(0, i) + a + x.substring(i));
-	            }
-	        }
-	    }
-	    else
-	    {
-	        set.add(a + "");
-	    }
-	    return set;
+			for (String x : recList) {
+				for (int i = 0; i <= x.length(); i++) {
+					list.add(x.substring(0, i) + a + x.substring(i));
+				}
+			}
+		} else {
+			list.add(a + "");
+		}
+		return list;
 	}
 }
-
