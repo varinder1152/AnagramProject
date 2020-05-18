@@ -1,4 +1,0 @@
-FROM openjdk:8-jdk-alpine
-COPY target/AnagramProject-0.0.1-SNAPSHOT.jar anagramApp.jar
-EXPOSE 8080
-ENTRYPOINT java -jar anagramApp.jar
