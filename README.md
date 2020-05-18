@@ -1,5 +1,5 @@
 # AnagramProject
-## To download the git on the PC, please run the following command: 
+## To download the git on the PC, Please run the following command: 
 - git clone https://github.com/varinder1152/AnagramProject.git <br />
 This will download the git on pc, run the following command: <br />
 - cd AnagramProject <br />
